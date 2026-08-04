@@ -1,0 +1,15 @@
+services:
+  <NAME>:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: <NAME>
+    restart: unless-stopped
+    ports:
+      - "9600:9600"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:9600/api/health/', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s

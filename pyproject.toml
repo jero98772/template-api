@@ -1,0 +1,29 @@
+[project]
+name = "economic-simulator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.141.1",
+    "kagglehub>=1.0.2",
+    "pandas>=3.0.5",
+    "plotly>=6.9.0",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.14.2",
+    "pytest>=9.1.1",
+    "requests>=2.34.2",
+    "uvicorn>=0.52.1",
+]
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.39.9",
+    "black>=26.5.1",
+    "pre-commit>=4.6.1",
+    "pyright>=1.1.411",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.16.1",
+    "ty>=0.0.65",
+]
